@@ -29,6 +29,6 @@ jobs:
       with: 
         # token: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: .
+        FOLDER: ./build/build
         # CI: true
-        # target-folder: .
+        # target-folder: ./build/build
