@@ -23,13 +23,13 @@ jobs:
         npm install
         npm run build
         cd ./build
-        mv ./build $GITHUB_WORKSPACE
+        mv ./build/build ./docs
       
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with: 
         # token: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: build
+        FOLDER: docs
         # CI: true
         # target-folder: .
