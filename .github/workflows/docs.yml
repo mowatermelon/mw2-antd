@@ -28,3 +28,4 @@ jobs:
         BRANCH: gh-pages
         FOLDER: build
         CI: true
+        target-folder: docs
