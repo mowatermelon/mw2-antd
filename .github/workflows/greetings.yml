@@ -16,11 +16,11 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: | 
-         '感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~
-         Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~'
+         感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~
+         Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~
         pr-message: | 
-         '感谢小伙伴对本仓库项目的第一次改进建议，我会尽快处理小伙伴的建议~ 
-         Thank you for your suggestions on the improvement of the warehouse project. I will deal with your suggestions as soon as possible~'
+         感谢小伙伴对本仓库项目的第一次改进建议，我会尽快处理小伙伴的建议~ 
+         Thank you for your suggestions on the improvement of the warehouse project. I will deal with your suggestions as soon as possible~
     - name: Issue assigner
       # You may pin to the exact commit or the version.
       # uses: estrada9166/issue-assigner@160ffbaaa146e34d7f6cea7e0271c240adfb6c3c
@@ -39,5 +39,5 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         # Message
         message: | 
-         '感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~ 
-         Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~'
+         感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~ 
+         Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~
