@@ -41,3 +41,24 @@ jobs:
         message: | 
          感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~ 
          Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~
+    - name: Auto Github Issue Labeller
+      # You may pin to the exact commit or the version.
+      # uses: larrylawl/auto-github-issue-labeller-action@3bf15b39ebddda551472f6de4c74083194ee8271
+      uses: larrylawl/auto-github-issue-labeller-action@v1.0
+      with:
+        # Github Personal Access Token
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Every trigger labels issues up to %DELTA days back. Primary purpose is to label pre-existing issues on initial setup.
+        # DELTA: # default is 1
+        # Skips prediction when below confidence threshold. Select from interval [-10, 4]. 
+        # CONFIDENCE: # default is 2
+        # Github Repository to label
+        # REPOSITORY: # default is larrylawl/Auto-Github-Issue-Labeller
+        # Issue label name for "features"
+        # FEATURE: # default is enhancement
+        # Issue label name for "bug"
+        # BUG: # default is bug
+        # Issue label name for "docs"
+        # DOCS: # default is documentation
+        # Version of action to use.
+        # VERSION: # default is v1.0
