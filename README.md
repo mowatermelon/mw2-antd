@@ -2,6 +2,73 @@
 
 基于 antd 的 midwayjs V2 静态项目 函数计算发布案例
 
+## 如何使用
+
+### clone 项目
+
+```sh
+git clone https://github.com/mowatermelon/mw2-antd.git
+```
+
+### 安装依赖
+
+```sh
+npm i
+```
+
+### 启动本地项目
+
+```sh
+npm run dev
+```
+
+### 修改 publicPath 配置
+
+修改 `config/config.ts` 文件，注意将 `/mw2-antd/`修改为发布域名的子域名，如果是根域名发布，则删除 `publicPath` 的配置，使用默认值 `/`
+
+```typescript
+// https://umijs.org/config/
+
+export default defineConfig({
+  ...
+  publicPath: process.env.NODE_ENV === 'production' ? '/mw2-antd/' : '/',
+  ...
+})
+
+```
+
+### 配置项目秘钥
+
+```sh
+npm run rconfig
+```
+
+> 第一次发布的时候 会需要配置 阿里云信息
+
+```sh
+$ npm run deploy
+
+? Aliyun Account ID ***********
+# https://fc.console.aliyun.com/fc/overview/cn-shanghai
+? Aliyun Access Key ID *****************
+? Aliyun Access Key Secret ***************
+# https://fc.console.aliyun.com/fc/service/
+? Default region name cn-shanghai
+? The timeout in seconds for each SDK client invoking
+100
+? The maximum number of retries for each SDK client 10
+0
+? Allow to anonymously report usage statistics to impr
+ove the tool over time? Yes
+? Use custom endpoint? Yes
+```
+
+### 构建 && 发布 midway 项目
+
+```sh
+npm run deploy
+```
+
 ## 官方文档
 
 <https://www.yuque.com/midwayjs/midway_v2/migrate_static>
