@@ -25,16 +25,16 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Create comments with the commit information
         WITH_COMMENTS: true
-    - name: Issue commenter
+    - name: Issue chat
       # You may pin to the exact commit or the version.
-      # uses: AlexRogalskiy/github-action-issue-commenter@56fae4888f1a3dff0fefe4fe987c9d4934423941
-      uses: AlexRogalskiy/github-action-issue-commenter@v2.0.1
+      # uses: actions-cool/issue-chat@78318fed8b6d75fe06025d03cc5896b6ecaa571e
+      uses: actions-cool/issue-chat@v0.1
+    - name: Issue comment
+      # You may pin to the exact commit or the version.
+      # uses: kyoncy/issue-comment-actions@1b1e351bee044874171a5dc99598257425f6272c
+      uses: kyoncy/issue-comment-actions@v1
       with:
-        # JSON data source with action parameters
-        # sourceData: # optional
-        # Comment message
+        # GitHub token for use by this action.
+        token: ${{ secrets.GITHUB_TOKEN }}
+        # Message
         message: '感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~ \n Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~'
-        # Request identifier
-        # requestId: # optional
-        # Github action token
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
