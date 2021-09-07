@@ -4,27 +4,27 @@
 
 ## 官方文档
 
-https://www.yuque.com/midwayjs/midway_v2/migrate_static
+<https://www.yuque.com/midwayjs/midway_v2/migrate_static>
 
 主要就是 配置 f.yml 再加上 `@midwayjs/cli` 依赖，再配置指令 `"deploy": "npm run build && midway-bin deploy --skipBuild"` 就可以了，但是实际跑起来根本不是这样。
 
 ```yml
-service: my-static-demo  			## 应用发布到云平台的名字
+service: my-static-demo ## 应用发布到云平台的名字
 
 provider:
-  name: aliyun       					## 发布的云平台，aliyun，tencent 等
+  name: aliyun ## 发布的云平台，aliyun，tencent 等
 
 deployType: static
 
 package:
   include:
-  	- build										## 需要拷贝的目录
+    - build ## 需要拷贝的目录
   exclude:
-    - package-lock.json				## 忽略 package-lock.json 文件
+    - package-lock.json ## 忽略 package-lock.json 文件
 
 custom:
   customDomain:
-    domainName: auto					## 自动生成域名
+    domainName: auto ## 自动生成域名
 ```
 
 ## 背景
@@ -105,7 +105,7 @@ export default defineConfig({
 
 ### 配置服务自定义域名
 
-https://fc.console.aliyun.com/fc/cname/${region}
+<https://fc.console.aliyun.com/fc/cname/${region}>
 
 > 需要请设置自定义域名的 CNAME 配置， 自定义域名需要解析到服务所在的 Endpoint，
 
