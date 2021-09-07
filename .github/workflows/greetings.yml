@@ -14,5 +14,27 @@ jobs:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: '感谢小伙伴对本仓库项目的提问，我会尽快处理小伙伴的提问~ \n Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~'
-        pr-message: '感谢小伙伴对本仓库项目的改进建议，我会尽快处理小伙伴的建议~ \n Thank you for your suggestions on the improvement of the warehouse project. I will deal with your suggestions as soon as possible~'
+        issue-message: '感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~ \n Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~'
+        pr-message: '感谢小伙伴对本仓库项目的第一次改进建议，我会尽快处理小伙伴的建议~ \n Thank you for your suggestions on the improvement of the warehouse project. I will deal with your suggestions as soon as possible~'
+    - name: Issue assigner
+      # You may pin to the exact commit or the version.
+      # uses: estrada9166/issue-assigner@160ffbaaa146e34d7f6cea7e0271c240adfb6c3c
+      uses: estrada9166/issue-assigner@v1
+      with:
+        # The GITHUB_TOKEN secret
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Create comments with the commit information
+        WITH_COMMENTS: true
+    - name: Issue commenter
+      # You may pin to the exact commit or the version.
+      # uses: AlexRogalskiy/github-action-issue-commenter@56fae4888f1a3dff0fefe4fe987c9d4934423941
+      uses: AlexRogalskiy/github-action-issue-commenter@v2.0.1
+      with:
+        # JSON data source with action parameters
+        # sourceData: # optional
+        # Comment message
+        message: '感谢小伙伴对本仓库项目的第一次提问，我会尽快处理小伙伴的提问~ \n Thank you for your questions about the warehouse project. I will deal with your questions as soon as possible~'
+        # Request identifier
+        # requestId: # optional
+        # Github action token
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
