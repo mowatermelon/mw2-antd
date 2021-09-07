@@ -40,6 +40,7 @@ export default defineConfig({
   theme: {
     'primary-color': defaultSettings.primaryColor,
   },
+  publicPath: process.env.NODE_ENV === 'production' ? '/mw2-antd/' : '/',
   outputPath: 'build/build',
   // esbuild is father build tools
   // https://umijs.org/plugins/plugin-esbuild
