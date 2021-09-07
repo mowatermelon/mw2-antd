@@ -54,7 +54,7 @@ jobs:
         # Skips prediction when below confidence threshold. Select from interval [-10, 4]. 
         # CONFIDENCE: # default is 2
         # Github Repository to label
-        REPOSITORY: https://github.com/mowatermelon/mw2-antd/
+        REPOSITORY: ${{github.repository}}
         # Issue label name for "features"
         # FEATURE: # default is enhancement
         # Issue label name for "bug"
